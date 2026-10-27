@@ -1,15 +1,44 @@
-# SigmaOS-mozjs
+    # SigmaOS-mozjs
 
-Part of the SigmaOS multi-repository architecture.
+    SpiderMonkey (mozjs) build wrapper
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/mozjs102
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Separation of Concerns**
+- **Defensive Programming**
+- **Fail-Fast**
+- **Least Astonishment**
+- **KISS**
+- **Deterministic Testing**
+
+    ## Usage
+    Verbs: `eval-plan, repl-plan, sandbox, module`
+
+    ```
+    $ sigma-js eval-plan "Math.max(1, 41)" --engine mozjs
+js102 -e 'Math.max(1, 41)'
+$ sigma-js repl-plan --engine cjs
+cjs
+$ sigma-js sandbox "Math.sqrt(16) + 2"
+safe
+$ sigma-js sandbox "require('fs').readFileSync('/etc/shadow')"
+error: blocked identifier: require
+$ sigma-js module --name calc --format cjs
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
