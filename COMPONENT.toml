@@ -1,0 +1,6 @@
+[component]
+name = "SigmaOS-mozjs"
+tier = 2
+description = "SpiderMonkey ECMAScript engine bridge and bindings for desktop shell runtimes"
+contracts = ['mozjs-bridge', 'spidermonkey-engine', 'js-context-manager']
+upstream_inspirations = ['https://github.com/linuxmint/mozjs102']
