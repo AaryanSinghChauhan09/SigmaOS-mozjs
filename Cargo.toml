@@ -2,5 +2,9 @@
 name = "sigmaos_mozjs"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "SigmaOS mozjs component inspired by Linux Mint / Omarchy / Arch Linux."
 
-[dependencies]
+[lib]
+name = "sigmaos_mozjs"
+path = "src/lib.rs"
