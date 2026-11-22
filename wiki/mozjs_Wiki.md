@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-mozjs Component Wiki
+# SigmaOS-mozjs Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-mozjs provides SpiderMonkey (mozjs) build wrapper for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-mozjs provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-mozjs Abstraction
-- Fail-Fast on SigmaOS-mozjs Initialization Errors
-- Deterministic SigmaOS-mozjs Setup
-- Clear Abstraction Over SigmaOS-mozjs APIs
-- Composition over Inheritance for SigmaOS-mozjs extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-mozjs Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-mozjs Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-mozjs Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-mozjs APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-mozjs extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-mozjs follows a SigmaOS-mozjs pattern:
+SigmaOS-mozjs follows a SigmaOS-mozjs pattern:
 - **SigmaOS-mozjs Core**: Provides SigmaOS-mozjs support, SigmaOS-mozjs management, and SigmaOS-mozjs tracking
 - **Management**: Supports SigmaOS-mozjs management, SigmaOS-mozjs configuration, and SigmaOS-mozjs lifecycle
 - **Tracking**: Supports SigmaOS-mozjs status, SigmaOS-mozjs tracking, and SigmaOS-mozjs lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-mozjs follows a SigmaOS-mozjs pattern:
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-mozjs by given configuration
--  - Register a SigmaOS-mozjs by given name
--  - Get SigmaOS-mozjs status and SigmaOS-mozjs availability
--  - Track SigmaOS-mozjs management and SigmaOS-mozjs tracking
+- Manage a SigmaOS-mozjs by given configuration
+- Register a SigmaOS-mozjs by given name
+- Get SigmaOS-mozjs status and SigmaOS-mozjs availability
+- Track SigmaOS-mozjs management and SigmaOS-mozjs tracking
 - Error types for SigmaOS-mozjs failure scenarios or unsupported SigmaOS-mozjs types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-mozjs init, SigmaOS-mozjs management)
 3. **Assert**: Verify the expected SigmaOS-mozjs results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-mozjs initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-mozjs failure scenarios
 - Unit tests provided for SigmaOS-mozjs management and configuration
